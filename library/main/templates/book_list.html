@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список книжок</title>
+</head>
+<body>
+    <header>
+        <h1>Список книжок</h1>
+    </header>
+
+    <main>
+        <ul>
+            {% for book in books %}
+                <li><strong>{{ book.title }}</strong> by {{ book.author }} - {{ book.pages }} pages</li>
+            {% empty %}
+                <li>Немає доступних книжок.</li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
